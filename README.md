@@ -186,3 +186,14 @@ YOLOv5 offers multiple pretrained models optimized for various use cases:
 |     555705 | cat               | cat                  |
 +------------+-------------------+----------------------+
 
+### How to run
+The repository contains two notebooks:
+1. Yolov5__VF.ipynb: 
+This notebook contains the code for yolov5s, yolov5l, yolov5m, yolov5n.
+The code can be run by uploading the notebook on "google colab" and also uploading the cocomini dataset.
+The currently selected model is "yolov5s", but other models can be tested by changing the model's name in the notebook.
+
+2. Object_Detection_Model.ipynb:
+This notebook contains the code for our custom object detection model.
+The code can be run by uploading the notebook on "kaggle" and importing coco2017 dataset.
+
