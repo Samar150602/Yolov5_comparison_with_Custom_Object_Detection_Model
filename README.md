@@ -75,9 +75,10 @@ In this model, two loss functions are combined to optimize predictions during tr
 2. **Regression Loss:** Ensures accurate bounding box predictions.
 
 The total loss is computed as:
-\[
-\text{Total Loss} = \text{Classification Loss} + \text{Regression Loss}
-\]
+
+$$
+\text{Total Loss} = \text{Classification Loss}+\text{Regression Loss}
+$$
 
 ---
 
@@ -86,9 +87,11 @@ The total loss is computed as:
 ### Intersection over Union (IoU)
 - **Definition:**
   - IoU quantifies the overlap between the predicted and ground truth bounding boxes.
-\[
-IoU = \frac{\text{Area of Overlap}}{\text{Area of Union}}
-\]
+
+$$
+\text{IoU} = \frac{\text{Area of Overlap}}{\text{Area of Union}}
+$$
+
 - **Purpose:**
   - Evaluates the quality of predicted bounding boxes.
   - Higher IoU indicates better alignment with ground truth.
@@ -101,6 +104,22 @@ IoU = \frac{\text{Area of Overlap}}{\text{Area of Union}}
 |--------------|-----------------------------|--------------------------------------|
 | **Precision** | Quality of predictions      | Most predictions are correct         |
 | **Recall**    | Completeness of detections  | Most ground truth objects are detected |
+
+#### **Precision**
+Precision measures the proportion of correct predictions (True Positives) among all predictions made by the model:
+
+$$
+\text{Precision} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}
+$$
+
+#### **Recall**
+Recall measures the proportion of actual objects (ground truth) that the model correctly detected:
+
+$$
+\text{Recall} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Negatives (FN)}}
+$$
+
+
 
 ---
 
