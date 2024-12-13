@@ -118,8 +118,6 @@ $$
 \text{Recall} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Negatives (FN)}}
 $$
 
-
-
 ---
 
 ## YOLO Model
@@ -177,7 +175,7 @@ This below tables shows the evaluation metrics for object detection performance 
 - **AR** shows a consistent improvement with increased object size, peaking for large objects (0.691).
 
 
-### Prediction vs. Ground Truth Table
+### Class Prediction vs. Ground Truth Table
 
 | **Image ID** | **Predicted Class** | **Ground Truth Class** |
 |--------------|---------------------|------------------------|
@@ -191,10 +189,54 @@ This below tables shows the evaluation metrics for object detection performance 
 | 555705       | cat                 | cat                    |
 
 ## Comparison between Yolov5 and Custom Model
-![AP](![Comparison Image](Yolov5_comparison_with_Custom_Object_Detection_Model/img/AP.png))
+### Yolov5
+The below Image shows the Average Precision plot for different IoU and different sizes.
+![AP](https://github.com/Samar150602/Yolov5_comparison_with_Custom_Object_Detection_Model/blob/10182c5b04568cee828a43ac6830f02e718b836b/img/AP.png)
 
+The below Image shows the Average Recall plot for IoU and different sizes.
+![AR](https://github.com/Samar150602/Yolov5_comparison_with_Custom_Object_Detection_Model/blob/10182c5b04568cee828a43ac6830f02e718b836b/img/AR.png)
 
+The predicted and actual bouding boxes along with class labels are displayed below for two test images for yolov5s
+1. A person wearing a Tie:
+![yolo_p](https://github.com/Samar150602/Yolov5_comparison_with_Custom_Object_Detection_Model/blob/10182c5b04568cee828a43ac6830f02e718b836b/img/yolo_p.png)
+2. Stop Sign
+![yolo_s](https://github.com/Samar150602/Yolov5_comparison_with_Custom_Object_Detection_Model/blob/10182c5b04568cee828a43ac6830f02e718b836b/img/yolo_s.png)
 
+### Custom Model
+#### Training and Validation loss:
+ - Training loss refers to the error or difference between the model’s predictions and the actual labels on the training dataset after each iteration or epoch of training. It gives us an indication of how well the model is fitting the training data.
+ - Validation loss is the error or difference between the model’s predictions and the actual labels, but on a separate validation dataset that is not seen by the model during training. This dataset is used to evaluate the model's generalization performance.Validation loss is used to check if the model is overfitting or underfitting. Overfitting happens when the model performs very well on the training data but poorly on unseen validation data.
+
+The graph below shows that both Training and validation losses decrease at start but after 3 or 4 epochs, validation loss doesn't decrease which means that our model is having some problem in generalizing for unseen data. As this is a custom model and due to the lack of time and computing resources, learning rate and batch size are not at the moment tuned to best values which can increase the performance of the model.
+![loss_graph](https://github.com/Samar150602/Yolov5_comparison_with_Custom_Object_Detection_Model/blob/10182c5b04568cee828a43ac6830f02e718b836b/img/loss_graph.png)
+
+#### Result on some Test Images
+This image below shows detection of a stop sign, As we can see the detection bounding box is not perfect but still our model has successfully classfied it with some error in the position in the image.
+![stop_sign](https://github.com/Samar150602/Yolov5_comparison_with_Custom_Object_Detection_Model/blob/10182c5b04568cee828a43ac6830f02e718b836b/img/stop_sign.png)
+
+In the following, the model has successfully defined the class i.e person and IoU score is also shown which tells there is a mismatch in the ground truth and our model's position.
+
+![girl](https://github.com/Samar150602/Yolov5_comparison_with_Custom_Object_Detection_Model/blob/10182c5b04568cee828a43ac6830f02e718b836b/img/girl.png)
+
+Below is an image of Zebra, the model detects the zebra and localizes it even though it fails to localize it accurately. 
+![Figure_1](https://github.com/Samar150602/Yolov5_comparison_with_Custom_Object_Detection_Model/blob/10182c5b04568cee828a43ac6830f02e718b836b/img/Figure_1.png)
+
+Here, 3 persons are standing in the image, the model successully predicts that the objects in the image are persons but it fails to localize them with great accuracy. The model gives 4 bounding boxes for 3 persons. 
+![Figure_2](https://github.com/Samar150602/Yolov5_comparison_with_Custom_Object_Detection_Model/blob/10182c5b04568cee828a43ac6830f02e718b836b/img/Figure_2.png)
+
+#### Class Prediction vs. Ground Truth Table
+
+| **Image Numbrer** | **Predicted Class** | **Ground Truth Class** |
+|-------------------|---------------------|------------------------|
+| 1                 | person              | person                 |
+| 1                 | tie                 | N/A                    |
+| 2                 | stop sign           | stop sign              |
+| 3                 | Person              | Person                 |
+| 3                 | Person              | Person                 |
+| 3                 | Person              | Person                 |
+| 4                 | Zebra               | Zebra                  |
+
+--
 ### How to run
 The repository contains two notebooks:
 1. Yolov5__VF.ipynb: 
@@ -205,4 +247,9 @@ The currently selected model is "yolov5s", but other models can be tested by cha
 2. Object_Detection_Model.ipynb:
 This notebook contains the code for our custom object detection model.
 The code can be run by uploading the notebook on "kaggle" and importing coco2017 dataset.
+
+### References
+1. https://docs.ultralytics.com/yolov5/
+2. https://pytorch.org/hub/nvidia_deeplearningexamples_resnet50/
+3. AI tools for brainstorming
 
