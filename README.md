@@ -151,18 +151,31 @@ YOLOv5 offers multiple pretrained models optimized for various use cases:
 
 #### Average Precision and Recall at Different IoU Ranges
 
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.404
- Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.508
- Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.457
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.199
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.567
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.638
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.334
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.434
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.434
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.205
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.571
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.691
+This below tables shows the evaluation metrics for object detection performance based on the Average Precision (AP) and Average Recall (AR) at different Intersection over Union (IoU) thresholds and for different object sizes. The metrics are computed for various configurations.
+
+##### Average Precision (AP)
+
+- **AP @[ IoU=0.50:0.95 | area=all | maxDets=100 ]** = 0.404
+- **AP @[ IoU=0.50 | area=all | maxDets=100 ]** = 0.508
+- **AP @[ IoU=0.75 | area=all | maxDets=100 ]** = 0.457
+- **AP @[ IoU=0.50:0.95 | area=small | maxDets=100 ]** = 0.199
+- **AP @[ IoU=0.50:0.95 | area=medium | maxDets=100 ]** = 0.567
+- **AP @[ IoU=0.50:0.95 | area=large | maxDets=100 ]** = 0.638
+
+##### Average Recall (AR)
+
+- **AR @[ IoU=0.50:0.95 | area=all | maxDets=1 ]** = 0.334
+- **AR @[ IoU=0.50:0.95 | area=all | maxDets=10 ]** = 0.434
+- **AR @[ IoU=0.50:0.95 | area=all | maxDets=100 ]** = 0.434
+- **AR @[ IoU=0.50:0.95 | area=small | maxDets=100 ]** = 0.205
+- **AR @[ IoU=0.50:0.95 | area=medium | maxDets=100 ]** = 0.571
+- **AR @[ IoU=0.50:0.95 | area=large | maxDets=100 ]** = 0.691
+
+##### Summary
+
+- The model demonstrates good overall performance, with particularly strong recall for larger objects.
+- The **AP** is highest for large objects (0.638), and lowest for small objects (0.199).
+- **AR** shows a consistent improvement with increased object size, peaking for large objects (0.691).
 
 
 ### Prediction vs. Ground Truth Table
