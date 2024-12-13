@@ -1,5 +1,4 @@
-# Object Detection with ResNet-50 and Custom Detection Head 
-### Comparison with Pre-Trained YOLOv5 Variants
+# Object Detection with ResNet-50 and Custom Detection Head and Comparison with Pre-Trained YOLOv5 Variants
 
 In this project, we developed a custom object detection model using a **ResNet-50 backbone** and compared its performance against pre-trained YOLOv5 variants: **YOLOv5n (nano)**, **YOLOv5s (small)**, **YOLOv5m (medium)**, and **YOLOv5l (large)**. 
 
@@ -190,6 +189,10 @@ This below tables shows the evaluation metrics for object detection performance 
 | 41888        | bird                | bird                   |
 | 555705       | cat                 | cat                    |
 | 555705       | cat                 | cat                    |
+
+## Comparison between Yolov5 and Custom Model
+![AP](![Comparison Image](Yolov5_comparison_with_Custom_Object_Detection_Model/img/AP.png))
+
 
 
 ### How to run
