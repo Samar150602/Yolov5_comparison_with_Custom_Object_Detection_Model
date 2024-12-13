@@ -165,26 +165,19 @@ YOLOv5 offers multiple pretrained models optimized for various use cases:
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.691
 
 
-#### Displaying the Predicted and Actual class for a few test Images
-+------------+-------------------+----------------------+
-|   Image ID | Predicted Class   | Ground Truth Class   |
-+============+===================+======================+
-|      85329 | person            | person               |
-+------------+-------------------+----------------------+
-|      85329 | tie               | tie                  |
-+------------+-------------------+----------------------+
-|     297343 | stop sign         | stop sign            |
-+------------+-------------------+----------------------+
-|      41888 | bird              | bird                 |
-+------------+-------------------+----------------------+
-|      41888 | bird              | bird                 |
-+------------+-------------------+----------------------+
-|      41888 | bird              | bird                 |
-+------------+-------------------+----------------------+
-|     555705 | cat               | cat                  |
-+------------+-------------------+----------------------+
-|     555705 | cat               | cat                  |
-+------------+-------------------+----------------------+
+### Prediction vs. Ground Truth Table
+
+| **Image ID** | **Predicted Class** | **Ground Truth Class** |
+|--------------|---------------------|------------------------|
+| 85329        | person              | person                 |
+| 85329        | tie                 | tie                    |
+| 297343       | stop sign           | stop sign              |
+| 41888        | bird                | bird                   |
+| 41888        | bird                | bird                   |
+| 41888        | bird                | bird                   |
+| 555705       | cat                 | cat                    |
+| 555705       | cat                 | cat                    |
+
 
 ### How to run
 The repository contains two notebooks:
