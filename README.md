@@ -146,3 +146,43 @@ YOLOv5 offers multiple pretrained models optimized for various use cases:
 | **YOLOv5l**        | Large version, high accuracy but resource-intensive. | For high-performance applications. |
 
 --- 🚀
+
+##### Note: Only Yolov5s Model's results have been presented below but results for different yolo versions can be checked by running the "YoloV5__VF" notebook by changing the model name.
+
+#### Average Precision and Recall at Different IoU Ranges
+
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.404
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.508
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.457
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.199
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.567
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.638
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.334
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.434
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.434
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.205
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.571
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.691
+
+
+#### Displaying the Predicted and Actual class for a few test Images
++------------+-------------------+----------------------+
+|   Image ID | Predicted Class   | Ground Truth Class   |
++============+===================+======================+
+|      85329 | person            | person               |
++------------+-------------------+----------------------+
+|      85329 | tie               | tie                  |
++------------+-------------------+----------------------+
+|     297343 | stop sign         | stop sign            |
++------------+-------------------+----------------------+
+|      41888 | bird              | bird                 |
++------------+-------------------+----------------------+
+|      41888 | bird              | bird                 |
++------------+-------------------+----------------------+
+|      41888 | bird              | bird                 |
++------------+-------------------+----------------------+
+|     555705 | cat               | cat                  |
++------------+-------------------+----------------------+
+|     555705 | cat               | cat                  |
++------------+-------------------+----------------------+
+
